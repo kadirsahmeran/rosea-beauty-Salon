@@ -1,6 +1,7 @@
 import { jsonResponse, optionsResponse } from "../_shared/cors.ts";
 import { createAdminClient } from "../_shared/supabaseAdmin.ts";
 import { getStripe, toStripeAmount } from "../_shared/stripe.ts";
+import { resolveCheckoutSiteUrl } from "../_shared/siteUrl.ts";
 
 type BookingPayload = {
   serviceId?: string;
@@ -102,10 +103,7 @@ Deno.serve(async (req) => {
       );
     }
 
-    const siteUrl = (Deno.env.get("SITE_URL") ?? "http://localhost:5173").replace(
-      /\/$/,
-      "",
-    );
+    const siteUrl = resolveCheckoutSiteUrl(req);
     const currency = "try";
     const stripe = getStripe();
 

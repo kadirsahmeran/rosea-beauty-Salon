@@ -50,7 +50,7 @@ The app runs at [http://localhost:5173](http://localhost:5173).
 | `VITE_SUPABASE_ANON_KEY` | `.env` | Public anon key |
 | `STRIPE_SECRET_KEY` | Edge Function secrets | Server-side Stripe API |
 | `STRIPE_WEBHOOK_SECRET` | Edge Function secrets | Webhook signature check |
-| `SITE_URL` | Edge Function secrets | Return URL after payment (`http://localhost:5173` locally) |
+| `SITE_URL` | Edge Function secrets | Fallback return URL after payment. Use the live site in production. |
 
 Stripe keys stay in Supabase secrets only:
 
@@ -58,7 +58,7 @@ Stripe keys stay in Supabase secrets only:
 npx supabase login
 npx supabase link --project-ref YOUR_PROJECT_REF
 npx supabase secrets set STRIPE_SECRET_KEY=sk_test_...
-npx supabase secrets set SITE_URL=http://localhost:5173
+npx supabase secrets set SITE_URL=https://your-site.netlify.app
 ```
 
 ## Database
