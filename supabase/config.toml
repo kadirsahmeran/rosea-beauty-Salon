@@ -1,0 +1,8 @@
+[functions.stripe-initialize]
+verify_jwt = false
+
+[functions.stripe-webhook]
+verify_jwt = false
+
+[functions.stripe-status]
+verify_jwt = false

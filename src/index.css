@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  --color-blush-50: #fdf3f6;
+  --color-blush-100: #fbe6ec;
+  --color-blush-200: #f6cfdb;
+  --color-blush-300: #eeabc0;
+  --color-blush-400: #e37fa0;
+  --color-blush-500: #d55480;
+  --color-blush-600: #b93a67;
+  --color-blush-700: #982c54;
+  --color-blush-800: #7d2646;
+  --color-blush-900: #69233e;
+
+  --color-cream-50: #fffdfa;
+  --color-cream-100: #fdf8f0;
+  --color-cream-200: #f8ede0;
+
+  --color-ink: #2c2320;
+}
+
+/* Swiper Cards özel nokta (pagination) renkleri */
+.about-cards-swiper .swiper-pagination-bullet {
+  background: #f1c3cd; /* blush rengi */
+  opacity: 0.6;
+}
+
+.about-cards-swiper .swiper-pagination-bullet-active {
+  background: #d9778f; /* koyu blush rengi */
+  opacity: 1;
+}
+
+.testimonials-swiper .swiper-pagination-bullet {
+  background: #f1c3cd; /* blush rengi */
+  opacity: 0.6;
+}
+
+.testimonials-swiper .swiper-pagination-bullet-active {
+  background: #d9778f; /* koyu blush rengi */
+  opacity: 1;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background-color: var(--color-cream-50);
+    background-image:
+      radial-gradient(
+        55rem 38rem at 8% -8%,
+        var(--color-blush-100) 0%,
+        transparent 62%
+      ),
+      radial-gradient(
+        48rem 36rem at 108% 18%,
+        var(--color-blush-50) 0%,
+        transparent 58%
+      );
+    background-repeat: no-repeat;
+  }
+}

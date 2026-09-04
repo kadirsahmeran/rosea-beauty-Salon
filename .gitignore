@@ -1,0 +1,41 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies and build output
+node_modules
+dist
+dist-ssr
+*.local
+
+# Environment and secrets — never commit real keys
+.env
+.env.*
+!.env.example
+
+# Supabase CLI local state (project ref, org id, pooler URL, account email)
+supabase/.temp
+supabase/.branches
+.supabase
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+Thumbs.db
+
+# Cursor / local tooling
+.cursor
+*.pem
+*.key
