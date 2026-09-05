@@ -1,0 +1,6 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Yönlendirme kuralları public/_redirects dosyasında.
+# Buraya da yazılırsa netlify.toml önce işlenir ve _redirects'i gölgeler.

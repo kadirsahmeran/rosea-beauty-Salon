@@ -1,0 +1,13 @@
+# SPA geri düşüşü.
+#
+# prerenderMeta yalnızca statik rotalar için gerçek bir index.html üretiyor
+# (/hizmetler, /blog, /randevu ...). /randevu/sonuc gibi dinamik adreslerin
+# diskte karşılığı yok; kural olmazsa Netlify kendi 404 sayfasını döndürür.
+
+/hizmetler/*   /index.html   200
+/blog/*        /index.html   200
+/randevu/*     /index.html   200
+
+# Bilinmeyen adresler: yine uygulama açılır (React Router NotFound sayfasını
+# gösterir) ama HTTP durumu doğru şekilde 404 kalır.
+/*             /index.html   404
