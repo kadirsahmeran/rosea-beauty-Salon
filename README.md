@@ -1,5 +1,7 @@
 # Roséa Beauty Center
 
+**Live site:** [rosea-beauty.netlify.app](https://rosea-beauty.netlify.app)
+
 Marketing site and online booking experience for **Roséa**, a beauty salon in Istanbul. Guests can browse services, meet the team, view the gallery, read the blog, and reserve a slot with secure checkout.
 
 The public site is a Vite + React SPA. Content and appointments live in Supabase. Payments go through Stripe Checkout — card details never touch this app.
@@ -58,7 +60,7 @@ Stripe keys stay in Supabase secrets only:
 npx supabase login
 npx supabase link --project-ref YOUR_PROJECT_REF
 npx supabase secrets set STRIPE_SECRET_KEY=sk_test_...
-npx supabase secrets set SITE_URL=https://your-site.netlify.app
+npx supabase secrets set SITE_URL=https://rosea-beauty.netlify.app
 ```
 
 ## Database
